@@ -1,0 +1,40 @@
+<div class="box-body" style="background-color: #fff">
+    <table class="table table-bordered">
+        <tr>
+            <th style="width: 80px">公司logo</th>
+            <th>公司名称</th>
+            <th>职位名称</th>
+            <th>工作地点</th>
+            <th>岗位薪资</th>
+            <th>学历</th>
+            <th>工作经验</th>
+            <th>职位描述</th>
+            <th style="width: 80px">操作</th>
+        </tr>
+        {{each data}}
+        <tr data-id="{{$_value._id}}" data-img="{{$value.companyLogo}}">
+            <th style="width: 80px"><img src="https://locahost:3000/upload/{{$value.companyLogo}}" alt="" width="70"></th>
+            <th>{{$value.companyName}}</th>
+            <th>{{$value.positionName}}</th>
+            <th>{{$value.city}}</th>
+            <th>{{$value.pay}}</th>
+            <th>{{$value.degree}}</th>
+            <th>{{$value.experience}}</th>
+            <th>{{$value.description}}</th>
+            <th style="width: 160px"><button class="btn btn-info">修改</button> <button class="btn btn-danger">删除</button></th>
+        </tr>
+
+    </table>
+    <div style="text-align:center">
+        <button class="btn btn-success" id="yjf-addposition">添加</button>
+    </div>
+    <div class="box-footer clearfix">
+        <ul class="pagination pagination-sm no-margin pull-right">
+            <li><a href="#">&laquo;</a></li>
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">&raquo;</a></li>
+        </ul>
+    </div>
+</div>
